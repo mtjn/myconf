@@ -1,0 +1,2 @@
+#!/bin/sh
+exec ~/.appimages/nvim.appimage "$@"

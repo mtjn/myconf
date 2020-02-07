@@ -1,0 +1,9 @@
+{
+  "eslint.autoFixOnSave": true,
+  "list.maxHeight": 30,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.width": 50,
+  "explorer.quitOnOpen": true,
+  "list.source.files.args": ["--hidden", "--color", "never", "--no-ignore-vcs", "--ignore-parent", "--files" ]
+}
+

@@ -28,6 +28,7 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-session'
 Plug 'Yggdroot/indentLine'
 
+Plug 'vim-scripts/accelerated-jk'
 "Plug 'goldfeld/vim-seek'
 Plug 'justinmk/vim-sneak'
 "Plug 'machkann-vim-sandwich'
@@ -36,6 +37,9 @@ call plug#end()
 
 source ~/.config/nvim/coc_config.vim
 
+"" issues
+" accelerated-jk doesn't seem to be working
+" test vim-surround
 
 "" general
 syntax on
@@ -72,7 +76,6 @@ highlight NonText ctermfg=8
 
 "" remappings
 nnoremap <leader>w :w<CR>
-nnoremap <leader>cl yiw}Oconsole.log("<C-r>"", <C-r>");<Esc>^
 nnoremap <leader>q @q
 xnoremap <leader>q @q
 cmap w!! w !sudo tee > /dev/null %
@@ -99,7 +102,7 @@ nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>; :b#<CR>
 nmap <leader>x :bp <BAR> bd #<CR>
-nmap <leader>bl :ls<CR>
+nmap <leader>n :enew<CR>
 
 " move between window splits
 noremap <silent> <C-h> <C-w>h<CR>
@@ -116,6 +119,14 @@ imap <Down> <nop>
 " delete to blackhole register
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
+
+" abbreviations
+nnoremap <leader>cll yiwoconsole.log("<C-r>"", <C-r>");<Esc>^
+nnoremap <leader>clp yiw}Oconsole.log("<C-r>"", <C-r>");<Esc>^
+nnoremap <leader>ue ouseEffect(() => {<CR><CR>}, [])<Esc>ki<TAB>
+nnoremap <leader>imr Oimport React from "react";<Esc>j^
+nnoremap <leader>ims Oimport styled from "styled-components";<Esc>j^
+nnoremap <leader>jsk O"<Esc>pa": "",<Esc>F"i
 
 
 "" plugins
@@ -150,6 +161,10 @@ let g:session_autoload = 'no'
 " vim-notes
 let g:notes_tab_indents = 0
 let g:notes_conceal_url = 0
+
+" accelrated-jk
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
 
 
 "" functions

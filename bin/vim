@@ -1,2 +1,2 @@
 #!/bin/sh
-exec ~/.appimages/nvim.appimage "$@"
+exec ~/.installs/nvim.appimage "$@"

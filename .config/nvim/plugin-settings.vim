@@ -25,3 +25,9 @@ let g:notes_conceal_url = 0
 let g:notes_smart_quotes = 0
 let g:notes_tab_indents = 0
 let g:notes_unicode_enabled = 0
+
+" far.vim
+let g:far#source = 'rgnvim'
+let g:far#ignore_files = ['~/.ignore']
+let g:far#window_layout = 'current'
+let g:far#file_mask_favorites = ['%', '/src/**', '**/*.*', '**/*.html', '**/*.js', '**/*.css']

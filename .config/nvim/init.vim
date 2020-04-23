@@ -14,19 +14,22 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'xolox/vim-misc' " required for xolox plugins
 Plug 'xolox/vim-notes'
+Plug 'xolox/vim-session'
 
-" review if necessary
+" review if these are necessary
 Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
 Plug 'leafgarland/typescript-vim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-sensible'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+Plug 'dkprice/vim-easygrep'
+
+" new
+Plug 'brooth/far.vim'
 
 " disabled
-"Plug 'dkprice/vim-easygrep'
 "Plug 'goldfeld/vim-seek'
 "Plug 'junegunn/fzf'
 "Plug 'junegunn/fzf.vim'

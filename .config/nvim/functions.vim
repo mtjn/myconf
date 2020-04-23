@@ -1,4 +1,4 @@
-function! s:getSelectedText()
+function! GetSelectedText()
   let l:old_reg = getreg('"')
   let l:old_regtype = getregtype('"')
   norm gvy
@@ -20,7 +20,7 @@ function! s:swap_lines(n1, n2)
     call setline(a:n2, line1)
 endfunction
 
-function! s:swap_up()
+function! SwapLinesUp()
     let n = line('.')
     if n == 1
         return
@@ -30,7 +30,7 @@ function! s:swap_up()
     exec n - 1
 endfunction
 
-function! s:swap_down()
+function! SwapLinesDown()
     let n = line('.')
     if n == line('$')
         return
@@ -39,4 +39,3 @@ function! s:swap_down()
     call s:swap_lines(n, n + 1)
     exec n + 1
 endfunction
-

@@ -1,3 +1,4 @@
+.local/
 .git/
 build/
 node_modules/

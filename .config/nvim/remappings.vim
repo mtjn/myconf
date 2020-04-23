@@ -62,23 +62,28 @@ nnoremap <leader>ue ouseEffect(() => {<CR><CR>}, [])<Esc>ki<TAB>
 
 " function calls
 " swap lines
-noremap <silent> <A-k> :call <SID>swap_up()<CR>
-noremap <silent> <A-j> :call <SID>swap_down()<CR>
+noremap <silent> <A-k> :call SwapLinesUp()<CR>
+noremap <silent> <A-j> :call SwapLinesDown()<CR>
 
 " execute macros on each line of visual selection
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
+" replicated in functions.vim because an error occurs when calling
+" getSelectedText() from this function
+"
 " search from visual selection
 vnoremap <silent> * :call setreg("/",
-    \ substitute(<SID>getSelectedText(),
+    \ substitute(GetSelectedText(),
     \ '\_s\+',
     \ '\\_s\\+', 'g')
     \ )<Cr>nN
-vnoremap <silent> # :call setreg("?",
-    \ substitute(<SID>getSelectedText(),
+
+vnoremap <silent> # :call setreg("/",
+    \ substitute(GetSelectedText(),
     \ '\_s\+',
     \ '\\_s\\+', 'g')
     \ )<Cr>nN
+
 " don't move to next result when initiating search
 nmap * *N 
 

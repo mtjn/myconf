@@ -1,4 +1,13 @@
-" NERDCommenter
+" coc.nvim
+let g:coc_global_extensions = [
+  \ 'coc-eslint',
+  \ 'coc-explorer',
+  \ 'coc-lists',
+  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ ]
+
+" nerdcommenter
 let g:NERDCreateDefaultMappings = 0
 
 " vim-airline

@@ -16,6 +16,12 @@ if status --is-interactive
   abbr -a :q exit
   abbr -a la "ls -lA --group-directories-first"
   abbr -a uu "sudo apt update; sudo apt upgrade --autoremove"
+  abbr -a aa "
+    cd ~/fpages; echo \"fpages:\"\t\t(git log --pretty=%h -1);
+    cd ~/bizadmin; echo \"bizadmin:\"\t\t(git log --pretty=%h -1);
+    cd ~/backend; echo \"backend:\"\t\t(git log --pretty=%h -1);
+    cd ~/admin; echo \"admin:\"\t\t(git log --pretty=%h -1);
+  "
 
   abbr -a gaa "git add ."
   abbr -a gai "git add -i"
@@ -23,9 +29,7 @@ if status --is-interactive
 
   abbr -a gb "git branch"
   abbr -a gbd "git branch -d"
-  abbr -a gbD "git branch -D"
-  abbr -a gbm "git branch -m" # rename branch
-  abbr -a gbmm "git branch --merged"
+  abbr -a gbm "git branch --merged"
 
   abbr -a gc "git commit"
   abbr -a gca "git commit --amend"

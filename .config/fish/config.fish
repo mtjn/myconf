@@ -94,11 +94,22 @@ if status --is-interactive
   abbr -a cfrbc "config rebase --continue"
 
   abbr -a cfs "config status"
-  abbr -a cfss "config status --untracked=no" # exclude untracked files
+  abbr -a cfsu "config status --untracked=no" # exclude untracked files
 
   abbr -a cfsh "config stash"
   abbr -a cfsha "config stash apply"
   abbr -a cfshc "config stash clear"
   abbr -a cfshl "config stash list"
   abbr -a cfshp "config stash pop"
+end
+
+function fish_prompt
+  set_color red
+  printf 'CONFIG:MASTER '
+
+  set_color $fish_color_cwd
+  printf '%s' (prompt_pwd)
+
+  set_color normal
+  printf '%s ' (__fish_git_prompt)
 end

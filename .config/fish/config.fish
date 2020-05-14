@@ -23,7 +23,7 @@ if status --is-interactive
     cd ~/admin; echo \"admin:\"\t\t(git log --pretty=%h -1);
   "
 
-  abbr -a gaa "git add ."
+  abbr -a ga "git add"
   abbr -a gai "git add -i"
   abbr -a gap "git add -p"
 
@@ -67,7 +67,9 @@ if status --is-interactive
   abbr -a gshp "git stash pop"
 
   # config git commands
-  abbr -a cfaa "config add ."
+  abbr -a cf "config"
+
+  abbr -a cfa "config add"
   abbr -a cfai "config add -i"
   abbr -a cfap "config add -p"
 

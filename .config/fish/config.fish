@@ -12,14 +12,6 @@ set -g __fish_git_prompt_char_untrackedfiles '!'
 set -g __fish_git_prompt_char_conflictedstate 'x'
 set -g __fish_git_prompt_char_stashstate '$'
 
-function fish_prompt
-  set_color $fish_color_cwd
-  printf '%s' (prompt_pwd)
-  set_color normal
-
-  printf '%s ' (__fish_git_prompt)
-end
-
 if status --is-interactive
   abbr -a :q exit
   abbr -a la "ls -lA --group-directories-first"
@@ -65,9 +57,6 @@ if status --is-interactive
   abbr -a grs "git reset"
   abbr -a grsh "git reset HEAD"
 
-  abbr -a grr "git restore"
-  abbr -a grrs "git restore --staged"
-
   abbr -a gs "git status"
 
   abbr -a gsh "git stash"
@@ -76,5 +65,3 @@ if status --is-interactive
   abbr -a gshl "git stash list"
   abbr -a gshp "git stash pop"
 end
-
-nvm use 12.9.1

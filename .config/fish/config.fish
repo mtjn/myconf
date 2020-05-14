@@ -24,13 +24,11 @@ if status --is-interactive
   abbr -a gb "git branch"
   abbr -a gbd "git branch -d"
   abbr -a gbD "git branch -D"
-  abbr -a gbm "git branch -m"
+  abbr -a gbm "git branch -m" # rename branch
   abbr -a gbmm "git branch --merged"
 
   abbr -a gc "git commit"
-  abbr -a gca "git commit -a"
-  abbr -a gcaa "git commit --amend"
-  abbr -a gcam "git commit -am"
+  abbr -a gca "git commit --amend"
   abbr -a gcm "git commit -m"
 
   abbr -a gco "git checkout"
@@ -42,13 +40,12 @@ if status --is-interactive
 
   abbr -a gf "git fetch"
 
-  abbr -a gl "git log"
-  abbr -a glg "git log --graph --oneline"
-  abbr -a glgm "git log --graph --oneline --no-merges master.."
-  abbr -a glm "git log --no-merges master.."
+  abbr -a gl "git log --graph --oneline"
+  abbr -a glm "git log --graph --oneline --no-merges master.."
 
   abbr -a gm "git merge"
 
+  abbr -a gps "git pull"
   abbr -a gps "git push"
 
   abbr -a grbm "git rebase master"
@@ -64,4 +61,40 @@ if status --is-interactive
   abbr -a gshc "git stash clear"
   abbr -a gshl "git stash list"
   abbr -a gshp "git stash pop"
+
+  # config git commands
+  abbr -a cfaa "config add ."
+  abbr -a cfai "config add -i"
+  abbr -a cfap "config add -p"
+
+  abbr -a cfb "config branch"
+
+  abbr -a cfc "config commit"
+  abbr -a cfca "config commit --amend"
+  abbr -a cfcm "config commit -m"
+
+  abbr -a cfco "config checkout"
+  abbr -a cfcom "config checkout master"
+
+  abbr -a cfd "config diff"
+  abbr -a cfdc "config diff --cached"
+
+  abbr -a cff "config fetch"
+
+  abbr -a cfl "config log --graph --oneline"
+
+  abbr -a cfpl "config pull"
+  abbr -a cfps "config push"
+
+  abbr -a cfrbm "config rebase master"
+  abbr -a cfrbc "config rebase --continue"
+
+  abbr -a cfs "config status"
+  abbr -a cfss "config status --untracked=no" # exclude untracked files
+
+  abbr -a cfsh "config stash"
+  abbr -a cfsha "config stash apply"
+  abbr -a cfshc "config stash clear"
+  abbr -a cfshl "config stash list"
+  abbr -a cfshp "config stash pop"
 end

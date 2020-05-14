@@ -5,3 +5,12 @@ node_modules/
 
 yarn-error.log
 yarn.lock
+
+.cache/
+.config/Code
+.config/Slack
+.config/HypnOS
+.wine
+.config/menus
+.config/chromium
+.npm

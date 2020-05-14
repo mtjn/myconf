@@ -55,8 +55,8 @@ if status --is-interactive
   abbr -a grbm "git rebase master"
   abbr -a grbc "git rebase --continue"
 
-  abbr -a grs "git reset"
-  abbr -a grsh "git reset HEAD"
+  abbr -a grt "git reset"
+  abbr -a grth "git reset HEAD"
 
   abbr -a gs "git status"
 

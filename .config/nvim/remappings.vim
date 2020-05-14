@@ -65,8 +65,8 @@ nnoremap <leader>ue ouseEffect(() => {<CR><CR>}, [])<Esc>ki<TAB>
 
 " function calls
 " swap lines
-noremap <silent> <A-k> :call SwapLinesUp()<CR>
-noremap <silent> <A-j> :call SwapLinesDown()<CR>
+nnoremap <silent> <A-k> :call SwapLinesUp()<CR>
+nnoremap <silent> <A-j> :call SwapLinesDown()<CR>
 
 " execute macros on each line of visual selection
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
@@ -93,16 +93,16 @@ nnoremap <leader>td :Note todo<CR>
 
 " nerdcommenter - toggle comment
 vmap ++ <plug>NERDCommenterToggle
-nnoremap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 " vim-session - quick open session
 nnoremap <silent> <leader>r :OpenSession<CR>
 
 " vim-tmux-navigator - move between window splits
-noremap <silent> <C-h> <C-w>h<CR>
-noremap <silent> <C-j> <C-w>j<CR>
-noremap <silent> <C-k> <C-w>k<CR>
-noremap <silent> <C-l> <C-w>l<CR>
+nnoremap <silent> <C-h> <C-w>h<CR>
+nnoremap <silent> <C-j> <C-w>j<CR>
+nnoremap <silent> <C-k> <C-w>k<CR>
+nnoremap <silent> <C-l> <C-w>l<CR>
 
 " coc.nvim
 " Use tab for trigger completion with characters ahead and navigate.
@@ -121,14 +121,14 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
-nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
-nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gy <Plug>(coc-type-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> <leader>K :call CocShowDocumentation()<CR>

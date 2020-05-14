@@ -26,6 +26,7 @@ Plug 'dkprice/vim-easygrep'
 
 " new
 Plug 'brooth/far.vim'
+Plug 'dag/vim-fish'
 
 " disabled
 "Plug 'goldfeld/vim-seek'

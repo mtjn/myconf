@@ -17,10 +17,10 @@ if status --is-interactive
   abbr -a la "ls -lA --group-directories-first"
   abbr -a uu "sudo apt update; sudo apt upgrade --autoremove"
   abbr -a aa "
-    cd ~/apps/fpages; echo \"fpages:\"\t\t(git log --pretty=%h -1);
-    cd ~/apps/bizadmin; echo \"bizadmin:\"\t\t(git log --pretty=%h -1);
-    cd ~/apps/backend; echo \"backend:\"\t\t(git log --pretty=%h -1);
-    cd ~/apps/admin; echo \"admin:\"\t\t(git log --pretty=%h -1);
+    cd ~/apps/fpages; echo   \"fpages:   \"(git log --pretty=%h -1);
+    cd ~/apps/bizadmin; echo \"bizadmin: \"(git log --pretty=%h -1);
+    cd ~/apps/backend; echo  \"backend:  \"(git log --pretty=%h -1);
+    cd ~/apps/admin; echo    \"admin:    \"(git log --pretty=%h -1);
   "
 
   abbr -a ga "git add"

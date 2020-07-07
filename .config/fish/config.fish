@@ -20,7 +20,9 @@ if not functions -q fisher
 end
 
 . ~/.fishmarks/marks.fish
+
 . ~/.config/fish/prompt.fish
 . ~/.config/fish/abbreviations.fish
+. ~/.config/fish/local.fish
 
 nvm use default
